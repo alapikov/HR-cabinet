@@ -1,5 +1,15 @@
+defTrans = cubic-bezier(0.6, 0, 0.4, 1)
+
 flexCenter()
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+
+.defHover
+    transition-property: filter !important
+    transition-duration: 0.2s !important
+    transition-timing-function: defTrans !important
+
+    &:hover
+        filter: opacity(0.65)

@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  watch: true,
   plugins:[
     new HtmlWebpackPlugin({
       template: './dist/index.html'

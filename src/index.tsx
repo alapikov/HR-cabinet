@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import {App} from './App';
 import './styles/styles.styl';
 
-const el = document.getElementById('root');
+const rootEl = document.getElementById('root')!;
 
-ReactDOM.render(<App />, el);
+const root = createRoot(rootEl);
+root.render(<App />);
