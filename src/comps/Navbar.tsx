@@ -1,15 +1,21 @@
 import React from 'react';
 import {Tabs, TabList, TabPanels, Tab, TabPanel} from '@chakra-ui/react';
-import logoMain from '../imgs/logoMain.png';
+import logoMainPng from '../imgs/logoMain.png';
 import '../styles/styles.styl';
 
 export const Navbar: React.FC = () => {
+    setTimeout(() => {
+        const logoMain = document.getElementById('logoMain');
+        logoMain?.classList.add('appeared');
+    }, 1300);
+
     const customTabMargins = {paddingX: '0', marginX: '16px', className: 'defHover'};
+
     return (
         <Tabs variant='line' size='lg'>
             <TabList borderBottom='none'>
-                <a href='https://niisva.dev'>
-                    <img src={logoMain} className='logoMain' alt=''></img>
+                <a href='https://niisva.dev' id='logoMain'>
+                    <img src={logoMainPng} className='logoMain' alt=''></img>
                 </a>
 
                 <Tab {...customTabMargins}>Статистика</Tab>

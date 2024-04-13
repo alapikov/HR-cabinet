@@ -4,6 +4,11 @@
 #root
     margin-top 16px
     max-width: 1600px
+    opacity: 0
+    transition(opacity, 1s, 0s)
+
+#root.appeared
+    opacity: 1
 
 body
     font-size: 14px
@@ -25,3 +30,10 @@ div
 img.logoMain
     max-width: 72px
     margin-right: 24px
+
+#logoMain
+    opacity: 0
+    transition(opacity, 0.8s, 0s)
+
+#logoMain.appeared
+    opacity: 1 
